@@ -324,7 +324,7 @@ int main()
     200, neuralnetwork::activation::SIGMOID, neuralnetwork::activation::D_SIGMOID,
     10, neuralnetwork::activation::SIGMOID, neuralnetwork::activation::D_SIGMOID    
   );
-  net.initGraph(0.1, 6);
+  net.initGraph(0.1, 4);
   train(pathImTrain, pathLabTrain,  net, 0.1, 35, 1000);
   double res = test(pathImTest, pathLabTest, net);
   std::cout << "Reussite de " << res << " pourcents apres entrainement" << std::endl;
