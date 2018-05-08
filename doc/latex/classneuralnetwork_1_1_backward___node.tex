@@ -1,0 +1,61 @@
+\hypertarget{classneuralnetwork_1_1_backward___node}{}\section{neuralnetwork\+:\+:Backward\+\_\+\+Node Class Reference}
+\label{classneuralnetwork_1_1_backward___node}\index{neuralnetwork\+::\+Backward\+\_\+\+Node@{neuralnetwork\+::\+Backward\+\_\+\+Node}}
+
+
+Classe de noeud de retropropagation (calculs) du graphe de retropropagation.  
+
+
+
+
+{\ttfamily \#include $<$Perceptron.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classneuralnetwork_1_1_backward___node_ac50fc4da5912e0fd15b1d8fffda22b97}{Backward\+\_\+\+Node}} (Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic, Eigen\+::\+Row\+Major $>$ $\ast$w, Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, 1 $>$ $\ast$err, Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, 1 $>$ $\ast$agreg, Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, 1 $>$ $\ast$err2, double($\ast$df\+\_\+act)(double), int f\+\_\+row, int f\+\_\+col, int n\+\_\+rows, int n\+\_\+cols)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classneuralnetwork_1_1_backward___node_a1d4dde8273848724d43e3923e9482f5d}\label{classneuralnetwork_1_1_backward___node_a1d4dde8273848724d43e3923e9482f5d}} 
+void {\bfseries operator()} (tbb\+::flow\+::continue\+\_\+msg m)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe de noeud de retropropagation (calculs) du graphe de retropropagation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classneuralnetwork_1_1_backward___node_ac50fc4da5912e0fd15b1d8fffda22b97}\label{classneuralnetwork_1_1_backward___node_ac50fc4da5912e0fd15b1d8fffda22b97}} 
+\index{neuralnetwork\+::\+Backward\+\_\+\+Node@{neuralnetwork\+::\+Backward\+\_\+\+Node}!Backward\+\_\+\+Node@{Backward\+\_\+\+Node}}
+\index{Backward\+\_\+\+Node@{Backward\+\_\+\+Node}!neuralnetwork\+::\+Backward\+\_\+\+Node@{neuralnetwork\+::\+Backward\+\_\+\+Node}}
+\subsubsection{\texorpdfstring{Backward\+\_\+\+Node()}{Backward\_Node()}}
+{\footnotesize\ttfamily neuralnetwork\+::\+Backward\+\_\+\+Node\+::\+Backward\+\_\+\+Node (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic, Eigen\+::\+Row\+Major $>$ $\ast$}]{w,  }\item[{Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, 1 $>$ $\ast$}]{err,  }\item[{Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, 1 $>$ $\ast$}]{agreg,  }\item[{Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, 1 $>$ $\ast$}]{err2,  }\item[{double($\ast$)(double)}]{df\+\_\+act,  }\item[{int}]{f\+\_\+row,  }\item[{int}]{f\+\_\+col,  }\item[{int}]{n\+\_\+rows,  }\item[{int}]{n\+\_\+cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Transposee de la matrice a laquelle est affecte le noeud du graphe \\
+\hline
+{\em err} & Erreur en entree \\
+\hline
+{\em agreg} & Agregation en entree \\
+\hline
+{\em err2} & Erreur en sortie \\
+\hline
+{\em df\+\_\+act} & Derive de la fonction d\textquotesingle{}activation \\
+\hline
+{\em f\+\_\+row} & Premiere ligne de la tranposee dont s\textquotesingle{}occupe le noeud \\
+\hline
+{\em f\+\_\+col} & Premiere colonne de la transposee dont s\textquotesingle{}occupe le noeud (a priori 0) \\
+\hline
+{\em n\+\_\+rows} & Nombre de lignes dont s\textquotesingle{}occupe le noeud \\
+\hline
+{\em n\+\_\+cols} & Nombre de colonnes dont s\textquotesingle{}occupe le noeud (a priori la largeur de la tranposee) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_perceptron_8hpp}{Perceptron.\+hpp}}\end{DoxyCompactItemize}

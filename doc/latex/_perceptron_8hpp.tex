@@ -1,0 +1,81 @@
+\hypertarget{_perceptron_8hpp}{}\section{src/\+Perceptron.hpp File Reference}
+\label{_perceptron_8hpp}\index{src/\+Perceptron.\+hpp@{src/\+Perceptron.\+hpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Dense$>$}\newline
+{\ttfamily \#include $<$tbb/tbb.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classneuralnetwork_1_1_forward___node}{neuralnetwork\+::\+Forward\+\_\+\+Node}}
+\begin{DoxyCompactList}\small\item\em Classe de noeud de propagation (calculs) du graphe de feed forward. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classneuralnetwork_1_1_backward___node}{neuralnetwork\+::\+Backward\+\_\+\+Node}}
+\begin{DoxyCompactList}\small\item\em Classe de noeud de retropropagation (calculs) du graphe de retropropagation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classneuralnetwork_1_1_update___node}{neuralnetwork\+::\+Update\+\_\+\+Node}}
+\begin{DoxyCompactList}\small\item\em Classe de noeud de mise a jour (calculs) du graphe de retropropagation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classneuralnetwork_1_1_wait___node}{neuralnetwork\+::\+Wait\+\_\+\+Node}}
+\begin{DoxyCompactList}\small\item\em Classe de noeud d\textquotesingle{}attente des graphes de feed forwards et de retropropagation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron$<$ D\+E\+P\+T\+H $>$}}
+\begin{DoxyCompactList}\small\item\em Classe \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{Perceptron}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceneuralnetwork_1_1activation}{neuralnetwork\+::activation}}
+\begin{DoxyCompactList}\small\item\em On definit dans ce namespace quelques fonctions d\textquotesingle{}activations, on peut tout de meme en definir ailleurs l\textquotesingle{}important etant qu\textquotesingle{}elles aient un unique argument de type double et qu\textquotesingle{}elles renvoient un double. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}\label{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}} 
+{\footnotesize template$<$typename t , int I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE$>$ }\\using \mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}} = Eigen\+::\+Matrix$<$ t, I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE, 1 $>$
+\begin{DoxyCompactList}\small\item\em Les entrees et sorties du \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{Perceptron}} sont un simple vecteur Eigen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_perceptron_8hpp_a73e6359a966cf22dbe5f4855ee4afde0}\label{_perceptron_8hpp_a73e6359a966cf22dbe5f4855ee4afde0}} 
+enum {\bfseries In\+Out\+Type} \{ {\bfseries D\+Y\+N\+A\+M\+IC} = -\/1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespaceneuralnetwork_1_1activation_af73eebb32dbf811448d273c7b8b4f1b9}\label{namespaceneuralnetwork_1_1activation_af73eebb32dbf811448d273c7b8b4f1b9}} 
+double {\bfseries neuralnetwork\+::activation\+::\+S\+I\+G\+M\+O\+ID} (double x)
+\item 
+\mbox{\Hypertarget{namespaceneuralnetwork_1_1activation_a6bca45628316235d5245ec9634c86be3}\label{namespaceneuralnetwork_1_1activation_a6bca45628316235d5245ec9634c86be3}} 
+double {\bfseries neuralnetwork\+::activation\+::\+D\+\_\+\+S\+I\+G\+M\+O\+ID} (double x)
+\item 
+\mbox{\Hypertarget{namespaceneuralnetwork_1_1activation_a9b2c20fee30eb74259d6f5f33bebad61}\label{namespaceneuralnetwork_1_1activation_a9b2c20fee30eb74259d6f5f33bebad61}} 
+double {\bfseries neuralnetwork\+::activation\+::\+A\+F\+F\+I\+NE} (double x)
+\item 
+\mbox{\Hypertarget{namespaceneuralnetwork_1_1activation_a8279fd8440c306255ffaf31a700fab76}\label{namespaceneuralnetwork_1_1activation_a8279fd8440c306255ffaf31a700fab76}} 
+double {\bfseries neuralnetwork\+::activation\+::\+D\+\_\+\+A\+F\+F\+I\+NE} (double x)
+\item 
+{\footnotesize template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ }\\std\+::ostream \& \mbox{\hyperlink{_perceptron_8hpp_aca8b500a044213a955254249a8621806}{operator$<$$<$}} (std\+::ostream \&out, \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$ p)
+\begin{DoxyCompactList}\small\item\em Affiche les matrices de poids du reseau et les agregations et activations de chaque couche (methode principalement utile au debugage) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_perceptron_8hpp_aca8b500a044213a955254249a8621806}\label{_perceptron_8hpp_aca8b500a044213a955254249a8621806}} 
+\index{Perceptron.\+hpp@{Perceptron.\+hpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Perceptron.\+hpp@{Perceptron.\+hpp}}
+\subsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{\mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$}]{p }\end{DoxyParamCaption})}
+
+
+
+Affiche les matrices de poids du reseau et les agregations et activations de chaque couche (methode principalement utile au debugage) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & reference sur le flux de sortie ou l\textquotesingle{}on veut afficher les informations \\
+\hline
+{\em p} & Perceptron a afficher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+out avec de nouvelles informations concernant le reseau dedans 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+La fonction est incoherente, une partie des informations est ecrite dans out et l\textquotesingle{}autre dans std\+::cout. Cette fonction sert principalement au debugage 
+\end{DoxyWarning}

@@ -1,0 +1,299 @@
+\hypertarget{main_8cpp}{}\section{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.\+cpp@{src/main.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$Eigen/\+Dense$>$}\newline
+{\ttfamily \#include \char`\"{}Perceptron.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$tbb/tbb.\+h$>$}\newline
+{\ttfamily \#include $<$tbb/task\+\_\+scheduler\+\_\+init.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_a7b3b25cba33b07c303f3060fe41887f6}\label{main_8cpp_a7b3b25cba33b07c303f3060fe41887f6}} 
+\#define {\bfseries B\+L\+A\+CK}~\textquotesingle{}\#\textquotesingle{}
+\item 
+\mbox{\Hypertarget{main_8cpp_a87b537f5fa5c109d3c05c13d6b18f382}\label{main_8cpp_a87b537f5fa5c109d3c05c13d6b18f382}} 
+\#define {\bfseries W\+H\+I\+TE}~\textquotesingle{}\+\_\+\textquotesingle{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_a26a17b84f02bdbc2466aca52c3ffecfb}{idx\+Endianness}} (char $\ast$f)
+\begin{DoxyCompactList}\small\item\em Permet de savoir si dans quelle mode lire les metadonnees d\textquotesingle{}un fichier I\+DX (low-\/endien ou big-\/endian) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{main_8cpp_a7411adf82c02491bc4a3f4ef9398f23a}{idx\+Meta}} (std\+::ifstream \&in, int mode, std\+::size\+\_\+t \&n, Args \&...args)
+\begin{DoxyCompactList}\small\item\em Lire les metadonnees d\textquotesingle{}un fichier I\+DX (fonction recursive) \end{DoxyCompactList}\item 
+{\footnotesize template$<$$>$ }\\void \mbox{\hyperlink{main_8cpp_a620f1d868230e9e53f30adada3247f67}{idx\+Meta}} (std\+::ifstream \&in, int mode, std\+::size\+\_\+t \&n)
+\begin{DoxyCompactList}\small\item\em Dernier appel recursif de idx\+Meta. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename t , int S\+I\+ZE$>$ }\\void \mbox{\hyperlink{main_8cpp_a6ddd8139d54835bb0c3a292fcd35eb29}{next\+Idx}} (std\+::ifstream \&fin, \mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ t, S\+I\+ZE $>$ \&vout, std\+::size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em On charge dans une entree-\/sortie de reseau le prochain element qui se trouve dans un fichier I\+DX. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename t , int I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE$>$ }\\void \mbox{\hyperlink{main_8cpp_ae729c152f4a4f7595e78d597062d75a1}{label\+To\+Vector}} (int in, \mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ t, I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ \&out)
+\begin{DoxyCompactList}\small\item\em Conversion d\textquotesingle{}un label entier en label vecteur pour la classification de caractere numerique. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename t , int S\+I\+ZE$>$ }\\void \mbox{\hyperlink{main_8cpp_a98d7682259086636e1c1f1cea3ea7f48}{print\+In\+Out}} (std\+::size\+\_\+t rows, std\+::size\+\_\+t cols, \mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ t, S\+I\+ZE $>$ v)
+\begin{DoxyCompactList}\small\item\em Affiche une entree-\/sortie de reseau contenant une images de M\+N\+I\+ST (principalement utile au debugage) \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ }\\int \mbox{\hyperlink{main_8cpp_ab534e5f112ff9f0f47943d197b3dd907}{train}} (char $\ast$path\+Images, char $\ast$path\+Labels, \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$ \&net, double step, std\+::size\+\_\+t nb\+Iter, std\+::size\+\_\+t nb\+Images)
+\begin{DoxyCompactList}\small\item\em Entrainement du reseau pour la classification de caracteres. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ }\\double \mbox{\hyperlink{main_8cpp_ac4410f77d1494b04295ec7f65e3c749d}{test}} (char $\ast$path\+Images, char $\ast$path\+Labels, \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$ \&net)
+\begin{DoxyCompactList}\small\item\em Test du reseau pour la classification de caracteres. \end{DoxyCompactList}\item 
+{\footnotesize template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ }\\void \mbox{\hyperlink{main_8cpp_a3a141350971f2fd6008db1c88917d448}{bench}} (char $\ast$path\+Im\+Train, char $\ast$path\+Lab\+Train, char $\ast$path\+Im\+Test, char $\ast$path\+Lab\+Test, char $\ast$plot, \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$ \&net, double step, std\+::size\+\_\+t nb\+Iter, std\+::size\+\_\+t nb\+Images)
+\begin{DoxyCompactList}\small\item\em Itere un certain nombre de fois sur la base d\textquotesingle{}entrainement et apres chaque iteration test le reseau sur la base de test, le taux de reussite de chaque test est stocke dans un fichier. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a3a141350971f2fd6008db1c88917d448}\label{main_8cpp_a3a141350971f2fd6008db1c88917d448}} 
+\index{main.\+cpp@{main.\+cpp}!bench@{bench}}
+\index{bench@{bench}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{bench()}{bench()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+void bench (\begin{DoxyParamCaption}\item[{char $\ast$}]{path\+Im\+Train,  }\item[{char $\ast$}]{path\+Lab\+Train,  }\item[{char $\ast$}]{path\+Im\+Test,  }\item[{char $\ast$}]{path\+Lab\+Test,  }\item[{char $\ast$}]{plot,  }\item[{\mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$ \&}]{net,  }\item[{double}]{step,  }\item[{std\+::size\+\_\+t}]{nb\+Iter,  }\item[{std\+::size\+\_\+t}]{nb\+Images }\end{DoxyParamCaption})}
+
+
+
+Itere un certain nombre de fois sur la base d\textquotesingle{}entrainement et apres chaque iteration test le reseau sur la base de test, le taux de reussite de chaque test est stocke dans un fichier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path\+Im\+Train} & Pointeur vers la chaine de caractere contenant le nom de fichier des images d\textquotesingle{}entrainement \\
+\hline
+{\em path\+Lab\+Train} & Pointeur vers la chaine de caractere contenant le nom de fichier des labels d\textquotesingle{}entrainement \\
+\hline
+{\em path\+Im\+Test} & Pointeur vers la chaine de caractere contenant le nom de fichier des images de test \\
+\hline
+{\em path\+Lab\+Test} & Pointeur vers la chaine de caractere contenant le nom de fichier des labels de test \\
+\hline
+{\em plot} & Pointeur vers la chaine de caractere contenant le nom de fichier dans lequel stocker les resultats \\
+\hline
+{\em net} & Reseau a entrainer \\
+\hline
+{\em step} & Pas d\textquotesingle{}apprentissage \\
+\hline
+{\em nb\+Iter} & Nombre d\textquotesingle{}iterations a effectuer sur l\textquotesingle{}ensemble des images d\textquotesingle{}entrainement \\
+\hline
+{\em nb\+Images} & Nombre d\textquotesingle{}images a charger en memoire simultanement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rien 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D\+E\+P\+TH} & Profondeur du reseau de neurones \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{main_8cpp_a26a17b84f02bdbc2466aca52c3ffecfb}\label{main_8cpp_a26a17b84f02bdbc2466aca52c3ffecfb}} 
+\index{main.\+cpp@{main.\+cpp}!idx\+Endianness@{idx\+Endianness}}
+\index{idx\+Endianness@{idx\+Endianness}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{idx\+Endianness()}{idxEndianness()}}
+{\footnotesize\ttfamily int idx\+Endianness (\begin{DoxyParamCaption}\item[{char $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Permet de savoir si dans quelle mode lire les metadonnees d\textquotesingle{}un fichier I\+DX (low-\/endien ou big-\/endian) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & Pointeur sur la chaine de caractere contenant le nom du fichier I\+DX \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+le mode selon lequel lire le fichier I\+DX (0 ou 1) 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+teste uniquement sur des processeurs Intel!!! 
+\end{DoxyWarning}
+\mbox{\Hypertarget{main_8cpp_a7411adf82c02491bc4a3f4ef9398f23a}\label{main_8cpp_a7411adf82c02491bc4a3f4ef9398f23a}} 
+\index{main.\+cpp@{main.\+cpp}!idx\+Meta@{idx\+Meta}}
+\index{idx\+Meta@{idx\+Meta}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{idx\+Meta()}{idxMeta()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+void idx\+Meta (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{in,  }\item[{int}]{mode,  }\item[{std\+::size\+\_\+t \&}]{n,  }\item[{Args \&...}]{args }\end{DoxyParamCaption})}
+
+
+
+Lire les metadonnees d\textquotesingle{}un fichier I\+DX (fonction recursive) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Flux du fichier I\+DX a lire \\
+\hline
+{\em mode} & Mode Mode pour lire le fichier selon l\textquotesingle{}endianness \\
+\hline
+{\em n} & Reference vers la variable dans laquelle mettre la prochaine metadonnee a lire \\
+\hline
+{\em args} & References vers les prochaines variable dans laquelle mettre les metadonnees suivantes a lire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+teste uniquement sur des processeurs Intel!!! 
+\end{DoxyWarning}
+\mbox{\Hypertarget{main_8cpp_a620f1d868230e9e53f30adada3247f67}\label{main_8cpp_a620f1d868230e9e53f30adada3247f67}} 
+\index{main.\+cpp@{main.\+cpp}!idx\+Meta@{idx\+Meta}}
+\index{idx\+Meta@{idx\+Meta}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{idx\+Meta()}{idxMeta()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$$>$ \\
+void idx\+Meta (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{in,  }\item[{int}]{mode,  }\item[{std\+::size\+\_\+t \&}]{n }\end{DoxyParamCaption})}
+
+
+
+Dernier appel recursif de idx\+Meta. 
+
+\begin{DoxyWarning}{Warning}
+teste uniquement sur des processeurs Intel!!! 
+\end{DoxyWarning}
+\mbox{\Hypertarget{main_8cpp_ae729c152f4a4f7595e78d597062d75a1}\label{main_8cpp_ae729c152f4a4f7595e78d597062d75a1}} 
+\index{main.\+cpp@{main.\+cpp}!label\+To\+Vector@{label\+To\+Vector}}
+\index{label\+To\+Vector@{label\+To\+Vector}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{label\+To\+Vector()}{labelToVector()}}
+{\footnotesize\ttfamily template$<$typename t , int I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE$>$ \\
+void label\+To\+Vector (\begin{DoxyParamCaption}\item[{int}]{in,  }\item[{\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ t, I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Conversion d\textquotesingle{}un label entier en label vecteur pour la classification de caractere numerique. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Label entier \\
+\hline
+{\em out} & Label vecteur en sortie \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rien 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em t} & Type d\textquotesingle{}entree du reseau (a priori un double) \\
+\hline
+{\em I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE} & Taille d\textquotesingle{}entree du reseau \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{main_8cpp_a6ddd8139d54835bb0c3a292fcd35eb29}\label{main_8cpp_a6ddd8139d54835bb0c3a292fcd35eb29}} 
+\index{main.\+cpp@{main.\+cpp}!next\+Idx@{next\+Idx}}
+\index{next\+Idx@{next\+Idx}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{next\+Idx()}{nextIdx()}}
+{\footnotesize\ttfamily template$<$typename t , int S\+I\+ZE$>$ \\
+void next\+Idx (\begin{DoxyParamCaption}\item[{std\+::ifstream \&}]{fin,  }\item[{\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ t, S\+I\+ZE $>$ \&}]{vout,  }\item[{std\+::size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+
+
+On charge dans une entree-\/sortie de reseau le prochain element qui se trouve dans un fichier I\+DX. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fin} & Flux du fichier I\+DX a lire \\
+\hline
+{\em vout} & Reference vers l\textquotesingle{}entree-\/sortie de reseau dans laquelle on charge le prochain element du fichier \\
+\hline
+{\em size} & Taille du prochain element a lire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rien 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em t} & Type de l\textquotesingle{}entree-\/sortie de reseau dans laquelle on charge le prochain element du fichier I\+DX \\
+\hline
+{\em S\+I\+ZE} & Taille de l\textquotesingle{}entree-\/sortie de reseau dans laquelle on charge le prochain element du fichier I\+DX \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyWarning}{Warning}
+teste uniquement sur des processeurs Intel!!! 
+\end{DoxyWarning}
+\mbox{\Hypertarget{main_8cpp_a98d7682259086636e1c1f1cea3ea7f48}\label{main_8cpp_a98d7682259086636e1c1f1cea3ea7f48}} 
+\index{main.\+cpp@{main.\+cpp}!print\+In\+Out@{print\+In\+Out}}
+\index{print\+In\+Out@{print\+In\+Out}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{print\+In\+Out()}{printInOut()}}
+{\footnotesize\ttfamily template$<$typename t , int S\+I\+ZE$>$ \\
+void print\+In\+Out (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{rows,  }\item[{std\+::size\+\_\+t}]{cols,  }\item[{\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ t, S\+I\+ZE $>$}]{v }\end{DoxyParamCaption})}
+
+
+
+Affiche une entree-\/sortie de reseau contenant une images de M\+N\+I\+ST (principalement utile au debugage) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & Nombre de lignes de l\textquotesingle{}image (a priori 28) \\
+\hline
+{\em cols} & Nombre de colonnes de l\textquotesingle{}image (a priori 28) \\
+\hline
+{\em v} & Entree-\/sortie de reseau a afficher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rien 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em t} & Type de l\textquotesingle{}entree-\/sortie de reseau a afficher \\
+\hline
+{\em S\+I\+ZE} & Taille de l\textquotesingle{}entree-\/sortie a afficher \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{main_8cpp_ac4410f77d1494b04295ec7f65e3c749d}\label{main_8cpp_ac4410f77d1494b04295ec7f65e3c749d}} 
+\index{main.\+cpp@{main.\+cpp}!test@{test}}
+\index{test@{test}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{test()}{test()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+double test (\begin{DoxyParamCaption}\item[{char $\ast$}]{path\+Images,  }\item[{char $\ast$}]{path\+Labels,  }\item[{\mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$ \&}]{net }\end{DoxyParamCaption})}
+
+
+
+Test du reseau pour la classification de caracteres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path\+Images} & Pointeur vers la chaine de caractere contenant le nom de fichier des images de test \\
+\hline
+{\em path\+Labels} & Pointeur vers la chaine de caractere contenant le nom de fichier des labels de test \\
+\hline
+{\em net} & Reseau a tester \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pourcentage de reussite 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D\+E\+P\+TH} & Profondeur du reseau de neurones \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{main_8cpp_ab534e5f112ff9f0f47943d197b3dd907}\label{main_8cpp_ab534e5f112ff9f0f47943d197b3dd907}} 
+\index{main.\+cpp@{main.\+cpp}!train@{train}}
+\index{train@{train}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+int train (\begin{DoxyParamCaption}\item[{char $\ast$}]{path\+Images,  }\item[{char $\ast$}]{path\+Labels,  }\item[{\mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$ \&}]{net,  }\item[{double}]{step,  }\item[{std\+::size\+\_\+t}]{nb\+Iter,  }\item[{std\+::size\+\_\+t}]{nb\+Images }\end{DoxyParamCaption})}
+
+
+
+Entrainement du reseau pour la classification de caracteres. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path\+Images} & Pointeur vers la chaine de caractere contenant le nom de fichier des images d\textquotesingle{}entrainement \\
+\hline
+{\em path\+Labels} & Pointeur vers la chaine de caractere contenant le nom de fichier des labels d\textquotesingle{}entrainement \\
+\hline
+{\em net} & Reseau a entrainer \\
+\hline
+{\em step} & Pas d\textquotesingle{}apprentissage \\
+\hline
+{\em nb\+Iter} & Nombre d\textquotesingle{}iterations a effectuer sur l\textquotesingle{}ensemble des images d\textquotesingle{}entrainement \\
+\hline
+{\em nb\+Images} & Nombre d\textquotesingle{}images a charger en memoire simultanement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/1 en cas de probleme d\textquotesingle{}allocation memoires (trop d\textquotesingle{}images a charger simultanement) 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D\+E\+P\+TH} & Profondeur du reseau de neurones \\
+\hline
+\end{DoxyTemplParams}

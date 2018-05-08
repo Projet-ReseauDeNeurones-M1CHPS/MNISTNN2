@@ -1,0 +1,444 @@
+\hypertarget{classneuralnetwork_1_1_perceptron}{}\section{neuralnetwork\+:\+:Perceptron$<$ D\+E\+P\+TH $>$ Class Template Reference}
+\label{classneuralnetwork_1_1_perceptron}\index{neuralnetwork\+::\+Perceptron$<$ D\+E\+P\+T\+H $>$@{neuralnetwork\+::\+Perceptron$<$ D\+E\+P\+T\+H $>$}}
+
+
+Classe \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{Perceptron}}.  
+
+
+
+
+{\ttfamily \#include $<$Perceptron.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename ... Args$>$ }\\\mbox{\hyperlink{classneuralnetwork_1_1_perceptron_a611ca300c9ad690d3d9496ed8f6634af}{Perceptron}} (double min, double max, Args... args)
+\begin{DoxyCompactList}\small\item\em Constructeur, les poids du reseau sont initialises entre deux bornes de maniere aleatoire, on definit egalement la taille des couches et leurs fonctions d\textquotesingle{}activation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classneuralnetwork_1_1_perceptron_a82ed55bb881ead0fd7bb8b37a870fd98}{init\+Weights}} (double min, double max)
+\begin{DoxyCompactList}\small\item\em Initialisation aleatoire des poids du reseau entre deux bornes. \end{DoxyCompactList}\item 
+double \& \mbox{\hyperlink{classneuralnetwork_1_1_perceptron_a6930cbdbb12382ffe13a5201d8ef47a8}{weight}} (std\+::size\+\_\+t couch, std\+::size\+\_\+t neuron, std\+::size\+\_\+t previous)
+\begin{DoxyCompactList}\small\item\em Accesseur des poids du reseau. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classneuralnetwork_1_1_perceptron_a9e4e8b2536a300feb5050478bd54e0ab}{weights\+\_\+count}} (std\+::size\+\_\+t couch)
+\begin{DoxyCompactList}\small\item\em Nombre de poids de chaque neurone d\textquotesingle{}une couche. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classneuralnetwork_1_1_perceptron_a967eda62d33f3ac45cff0e6be3e6630a}{depth}} ()
+\begin{DoxyCompactList}\small\item\em Profondeur du reseau. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classneuralnetwork_1_1_perceptron_a781b53edd909baab32eb6f6d9a3921d6}{couch\+\_\+size}} (std\+::size\+\_\+t couch)
+\begin{DoxyCompactList}\small\item\em Nombre de neurones d\textquotesingle{}une couche donnee. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ double, neuralnetwork\+::\+In\+Out\+Type\+::\+D\+Y\+N\+A\+M\+IC $>$ \mbox{\hyperlink{classneuralnetwork_1_1_perceptron_a41fec540bd2a224e43ab156623fce304}{agreg}} (std\+::size\+\_\+t couch)
+\begin{DoxyCompactList}\small\item\em Les dernieres agregations enregistrees pour une couche donnee (methode principalement utile au debugage) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ double, neuralnetwork\+::\+In\+Out\+Type\+::\+D\+Y\+N\+A\+M\+IC $>$ \mbox{\hyperlink{classneuralnetwork_1_1_perceptron_aaccd517b8c133cd12b19ec22f04a299e}{activation}} (std\+::size\+\_\+t couch)
+\begin{DoxyCompactList}\small\item\em Les dernieres activations enregistrees pour une couche donnee (methode principalement utile au debugage) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classneuralnetwork_1_1_perceptron_ab05c12459b4ee03a75cc241b59aa0481}{print\+Matrix\+Couch}} (std\+::ostream \&out, std\+::size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Ecrit la matrice des poids d\textquotesingle{}une couche, une ligne correspond a un neurone, les poids sont dans l\textquotesingle{}odre des entrees provenant de la couche precedente et les agregations et activations de cette couche (methode principalement utile au debugage) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename tin , int I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE, typename tout , int O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE$>$ }\\void \mbox{\hyperlink{classneuralnetwork_1_1_perceptron_a83e9fbb5f68a8281fe29c51cc538e44c}{feed\+Forward}} (\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ tin, I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ \&in, \mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ tout, O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ \&out, bool save\+Agreg, bool save\+Activation)
+\begin{DoxyCompactList}\small\item\em Evalue une entree avec le reseau. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename t , int I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE$>$ }\\void \mbox{\hyperlink{classneuralnetwork_1_1_perceptron_ac65162cfaacf1d9e9493a0f71efe84f5}{apply\+Activation}} (\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ t, I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ \&in, std\+::size\+\_\+t fi)
+\begin{DoxyCompactList}\small\item\em Applique la fonction d\textquotesingle{}activation sur l\textquotesingle{}agregation calulee d\textquotesingle{}une couche. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename tin , int I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE, typename tout , int O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE$>$ }\\void \mbox{\hyperlink{classneuralnetwork_1_1_perceptron_a3aef48d797fceda980d1cbf63ba62eff}{backpropagation}} (\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ tin, I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ $\ast$ins, \mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ tout, O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ $\ast$outs, std\+::size\+\_\+t n, double step)
+\begin{DoxyCompactList}\small\item\em Applique l\textquotesingle{}algorithme de retropropagation du gradient avec un jeu d\textquotesingle{}exemples afin d\textquotesingle{}entrainer le reseau. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classneuralnetwork_1_1_perceptron_a220623af970ea20a00bc2d9096946cbc}{init\+Graph}} (double step, int nb\+\_\+threads)
+\begin{DoxyCompactList}\small\item\em Initailise les graphes T\+BB pour le feed forward et la retropropagation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename tin , int I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE, typename tout , int O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE$>$ }\\void \mbox{\hyperlink{classneuralnetwork_1_1_perceptron_a759d5647ad309215f083d5c8519838ee}{parallel\+\_\+feed\+Forward}} (\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ tin, I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ \&in, \mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ tout, O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ \&out)
+\begin{DoxyCompactList}\small\item\em Evalue une entree avec le reseau avec T\+BB. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename tin , int I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE, typename tout , int O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE$>$ }\\void \mbox{\hyperlink{classneuralnetwork_1_1_perceptron_a0f2a106043e5febb19e0d18a94e32dcc}{parallel\+\_\+backpropagation}} (\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ tin, I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ $\ast$ins, \mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ tout, O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ $\ast$outs, std\+::size\+\_\+t n, double step)
+\begin{DoxyCompactList}\small\item\em Applique l\textquotesingle{}algorithme de retropropagation du gradient avec un jeu d\textquotesingle{}exemples afin d\textquotesingle{}entrainer le reseau avec T\+BB. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$\newline
+class neuralnetwork\+::\+Perceptron$<$ D\+E\+P\+T\+H $>$}
+
+Classe \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{Perceptron}}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em D\+E\+P\+TH} & nombres de couches du perceptron sans compter la couche d\textquotesingle{}entrée \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classneuralnetwork_1_1_perceptron_a611ca300c9ad690d3d9496ed8f6634af}\label{classneuralnetwork_1_1_perceptron_a611ca300c9ad690d3d9496ed8f6634af}} 
+\index{neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}!Perceptron@{Perceptron}}
+\index{Perceptron@{Perceptron}!neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}}
+\subsubsection{\texorpdfstring{Perceptron()}{Perceptron()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+template$<$typename ... Args$>$ \\
+\mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$\+::\mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{Perceptron}} (\begin{DoxyParamCaption}\item[{double}]{min,  }\item[{double}]{max,  }\item[{Args...}]{args }\end{DoxyParamCaption})}
+
+
+
+Constructeur, les poids du reseau sont initialises entre deux bornes de maniere aleatoire, on definit egalement la taille des couches et leurs fonctions d\textquotesingle{}activation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & Valeur minimal d\textquotesingle{}un poids du reseau \\
+\hline
+{\em max} & Valeur maximal d\textquotesingle{}un poids du reseau \\
+\hline
+{\em args} & Trois arguments pour definie une couche, le premier est le nombre de neurone de la couche, le deuxieme est est la fonction d\textquotesingle{}activation, le troisieme est la derivee de la fonction d\textquotesingle{}activation. Les trois premiers arguments definissent la premiere couche cachee, les trois suivants la deuxieme couche cachee, etc... la fonction d\textquotesingle{}activation et sa derivee doivent etre des pointeurs sur fonction qui prennent un double et retourne un double \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classneuralnetwork_1_1_perceptron_aaccd517b8c133cd12b19ec22f04a299e}\label{classneuralnetwork_1_1_perceptron_aaccd517b8c133cd12b19ec22f04a299e}} 
+\index{neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}!activation@{activation}}
+\index{activation@{activation}!neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}}
+\subsubsection{\texorpdfstring{activation()}{activation()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, 1 $>$ \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$\+::activation (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{couch }\end{DoxyParamCaption})}
+
+
+
+Les dernieres activations enregistrees pour une couche donnee (methode principalement utile au debugage) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em couch} & La couche en question \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+une entree-\/sortie de neurones qui comporte toutes les dernieres activations enregistrees de la couche en question 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classneuralnetwork_1_1_perceptron_a41fec540bd2a224e43ab156623fce304}\label{classneuralnetwork_1_1_perceptron_a41fec540bd2a224e43ab156623fce304}} 
+\index{neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}!agreg@{agreg}}
+\index{agreg@{agreg}!neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}}
+\subsubsection{\texorpdfstring{agreg()}{agreg()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, 1 $>$ \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$\+::agreg (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{couch }\end{DoxyParamCaption})}
+
+
+
+Les dernieres agregations enregistrees pour une couche donnee (methode principalement utile au debugage) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em couch} & La couche en question \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+une entree-\/sortie de neurones qui comporte toutes les dernieres agregation enregistrees de la couche en question 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classneuralnetwork_1_1_perceptron_ac65162cfaacf1d9e9493a0f71efe84f5}\label{classneuralnetwork_1_1_perceptron_ac65162cfaacf1d9e9493a0f71efe84f5}} 
+\index{neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}!apply\+Activation@{apply\+Activation}}
+\index{apply\+Activation@{apply\+Activation}!neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}}
+\subsubsection{\texorpdfstring{apply\+Activation()}{applyActivation()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+template$<$typename t , int I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE$>$ \\
+void \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$\+::apply\+Activation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ t, I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ \&}]{in,  }\item[{std\+::size\+\_\+t}]{fi }\end{DoxyParamCaption})}
+
+
+
+Applique la fonction d\textquotesingle{}activation sur l\textquotesingle{}agregation calulee d\textquotesingle{}une couche. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & L\textquotesingle{}aggregation calculee de la couche fi \\
+\hline
+{\em fi} & La couche en question \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rien 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em tin} & type de l\textquotesingle{}agreation (a priori un double) \\
+\hline
+{\em I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE} & taille de la couche \\
+\hline
+{\em tout} & type de l\textquotesingle{}activation (a priori un double) \\
+\hline
+{\em O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE} & taille de la couche \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]possibilite de se passer de in si feed\+Forward enregistre systematiquement l\textquotesingle{}agregation \end{DoxyRefDesc}
+\mbox{\Hypertarget{classneuralnetwork_1_1_perceptron_a3aef48d797fceda980d1cbf63ba62eff}\label{classneuralnetwork_1_1_perceptron_a3aef48d797fceda980d1cbf63ba62eff}} 
+\index{neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}!backpropagation@{backpropagation}}
+\index{backpropagation@{backpropagation}!neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}}
+\subsubsection{\texorpdfstring{backpropagation()}{backpropagation()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+template$<$typename tin , int I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE, typename tout , int O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE$>$ \\
+void \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$\+::backpropagation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ tin, I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ $\ast$}]{ins,  }\item[{\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ tout, O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ $\ast$}]{outs,  }\item[{std\+::size\+\_\+t}]{n,  }\item[{double}]{step }\end{DoxyParamCaption})}
+
+
+
+Applique l\textquotesingle{}algorithme de retropropagation du gradient avec un jeu d\textquotesingle{}exemples afin d\textquotesingle{}entrainer le reseau. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ins} & Tableau des exemples d\textquotesingle{}entrees du reseau \\
+\hline
+{\em outs} & Tableau des sorties attendues pour chaque exemple de ins (organises dans le meme ordre) \\
+\hline
+{\em n} & Nombre d\textquotesingle{}exemples \\
+\hline
+{\em step} & Pas d\textquotesingle{}apprentissage \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rien 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em tin} & type des entrees (a priori double) \\
+\hline
+{\em I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE} & taille d\textquotesingle{}entree du reseau \\
+\hline
+{\em tout} & type des sorties du reseau (a priori double) \\
+\hline
+{\em O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE} & taille de sortie du reseau \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classneuralnetwork_1_1_perceptron_a781b53edd909baab32eb6f6d9a3921d6}\label{classneuralnetwork_1_1_perceptron_a781b53edd909baab32eb6f6d9a3921d6}} 
+\index{neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}!couch\+\_\+size@{couch\+\_\+size}}
+\index{couch\+\_\+size@{couch\+\_\+size}!neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}}
+\subsubsection{\texorpdfstring{couch\+\_\+size()}{couch\_size()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$\+::couch\+\_\+size (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{couch }\end{DoxyParamCaption})}
+
+
+
+Nombre de neurones d\textquotesingle{}une couche donnee. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em couch} & La couche en question \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nombre de neurones de la couche en question 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classneuralnetwork_1_1_perceptron_a967eda62d33f3ac45cff0e6be3e6630a}\label{classneuralnetwork_1_1_perceptron_a967eda62d33f3ac45cff0e6be3e6630a}} 
+\index{neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}!depth@{depth}}
+\index{depth@{depth}!neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}}
+\subsubsection{\texorpdfstring{depth()}{depth()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$\+::depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Profondeur du reseau. 
+
+\begin{DoxyReturn}{Returns}
+La profondeur du reseau sans prendre en compte la couche d\textquotesingle{}entree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classneuralnetwork_1_1_perceptron_a83e9fbb5f68a8281fe29c51cc538e44c}\label{classneuralnetwork_1_1_perceptron_a83e9fbb5f68a8281fe29c51cc538e44c}} 
+\index{neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}!feed\+Forward@{feed\+Forward}}
+\index{feed\+Forward@{feed\+Forward}!neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}}
+\subsubsection{\texorpdfstring{feed\+Forward()}{feedForward()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+template$<$typename tin , int I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE, typename tout , int O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE$>$ \\
+void \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$\+::feed\+Forward (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ tin, I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ \&}]{in,  }\item[{\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ tout, O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ \&}]{out,  }\item[{bool}]{save\+Agreg,  }\item[{bool}]{save\+Activation }\end{DoxyParamCaption})}
+
+
+
+Evalue une entree avec le reseau. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & L\textquotesingle{}entree a evaluer \\
+\hline
+{\em out} & La sortie du reseau \\
+\hline
+{\em save\+Agreg} & Si place a true, les agregations des differentes couches seront enregistrees \\
+\hline
+{\em save\+Activation} & Si place a true, les activations des differentes couches seront enregistrees \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em tin} & type d\textquotesingle{}entree du reseau (a priori un double) \\
+\hline
+{\em I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE} & taille d\textquotesingle{}entree du reseau \\
+\hline
+{\em tout} & type des sorties du reseau (a priori un double) \\
+\hline
+{\em O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE} & taille de sortie du reseau \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classneuralnetwork_1_1_perceptron_a220623af970ea20a00bc2d9096946cbc}\label{classneuralnetwork_1_1_perceptron_a220623af970ea20a00bc2d9096946cbc}} 
+\index{neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}!init\+Graph@{init\+Graph}}
+\index{init\+Graph@{init\+Graph}!neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}}
+\subsubsection{\texorpdfstring{init\+Graph()}{initGraph()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+void \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$\+::init\+Graph (\begin{DoxyParamCaption}\item[{double}]{step,  }\item[{int}]{nb\+\_\+threads }\end{DoxyParamCaption})}
+
+
+
+Initailise les graphes T\+BB pour le feed forward et la retropropagation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em step} & Pas d\textquotesingle{}apprentissage \\
+\hline
+{\em nb\+\_\+threads} & En combien de lignes on decoupe chaque matrice et chaque transposee (meme nombre que les threads conseille) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rien 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classneuralnetwork_1_1_perceptron_a82ed55bb881ead0fd7bb8b37a870fd98}\label{classneuralnetwork_1_1_perceptron_a82ed55bb881ead0fd7bb8b37a870fd98}} 
+\index{neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}!init\+Weights@{init\+Weights}}
+\index{init\+Weights@{init\+Weights}!neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}}
+\subsubsection{\texorpdfstring{init\+Weights()}{initWeights()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+void \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$\+::init\+Weights (\begin{DoxyParamCaption}\item[{double}]{min,  }\item[{double}]{max }\end{DoxyParamCaption})}
+
+
+
+Initialisation aleatoire des poids du reseau entre deux bornes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & Valeur minimal d\textquotesingle{}un poids du reseau \\
+\hline
+{\em max} & Valeur maximal d\textquotesingle{}un poids du reseau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rien 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classneuralnetwork_1_1_perceptron_a0f2a106043e5febb19e0d18a94e32dcc}\label{classneuralnetwork_1_1_perceptron_a0f2a106043e5febb19e0d18a94e32dcc}} 
+\index{neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}!parallel\+\_\+backpropagation@{parallel\+\_\+backpropagation}}
+\index{parallel\+\_\+backpropagation@{parallel\+\_\+backpropagation}!neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}}
+\subsubsection{\texorpdfstring{parallel\+\_\+backpropagation()}{parallel\_backpropagation()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+template$<$typename tin , int I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE, typename tout , int O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE$>$ \\
+void \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$\+::parallel\+\_\+backpropagation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ tin, I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ $\ast$}]{ins,  }\item[{\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ tout, O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ $\ast$}]{outs,  }\item[{std\+::size\+\_\+t}]{n,  }\item[{double}]{step }\end{DoxyParamCaption})}
+
+
+
+Applique l\textquotesingle{}algorithme de retropropagation du gradient avec un jeu d\textquotesingle{}exemples afin d\textquotesingle{}entrainer le reseau avec T\+BB. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ins} & Tableau des exemples d\textquotesingle{}entrees du reseau \\
+\hline
+{\em outs} & Tableau des sorties attendues pour chaque exemple de ins (organises dans le meme ordre) \\
+\hline
+{\em n} & Nombre d\textquotesingle{}exemples \\
+\hline
+{\em step} & Pas d\textquotesingle{}apprentissage \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rien 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em tin} & type des entrees (a priori double) \\
+\hline
+{\em I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE} & taille d\textquotesingle{}entree du reseau \\
+\hline
+{\em tout} & type des sorties du reseau (a priori double) \\
+\hline
+{\em O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE} & taille de sortie du reseau \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{classneuralnetwork_1_1_perceptron_a759d5647ad309215f083d5c8519838ee}\label{classneuralnetwork_1_1_perceptron_a759d5647ad309215f083d5c8519838ee}} 
+\index{neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}!parallel\+\_\+feed\+Forward@{parallel\+\_\+feed\+Forward}}
+\index{parallel\+\_\+feed\+Forward@{parallel\+\_\+feed\+Forward}!neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}}
+\subsubsection{\texorpdfstring{parallel\+\_\+feed\+Forward()}{parallel\_feedForward()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+template$<$typename tin , int I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE, typename tout , int O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE$>$ \\
+void \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$\+::parallel\+\_\+feed\+Forward (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ tin, I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ \&}]{in,  }\item[{\mbox{\hyperlink{_perceptron_8hpp_a1df3992453d71de615dab4ca5eadba8d}{neuralnetwork\+::\+In\+Out}}$<$ tout, O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE $>$ \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Evalue une entree avec le reseau avec T\+BB. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & L\textquotesingle{}entree a evaluer \\
+\hline
+{\em out} & La sortie du reseau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rien 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em tin} & type d\textquotesingle{}entree du reseau (a priori un double) \\
+\hline
+{\em I\+N\+P\+U\+T\+\_\+\+S\+I\+ZE} & taille d\textquotesingle{}entree du reseau \\
+\hline
+{\em tout} & type des sorties du reseau (a priori un double) \\
+\hline
+{\em O\+U\+T\+P\+U\+T\+\_\+\+S\+I\+ZE} & taille de sortie du reseau \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+Rien 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classneuralnetwork_1_1_perceptron_ab05c12459b4ee03a75cc241b59aa0481}\label{classneuralnetwork_1_1_perceptron_ab05c12459b4ee03a75cc241b59aa0481}} 
+\index{neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}!print\+Matrix\+Couch@{print\+Matrix\+Couch}}
+\index{print\+Matrix\+Couch@{print\+Matrix\+Couch}!neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}}
+\subsubsection{\texorpdfstring{print\+Matrix\+Couch()}{printMatrixCouch()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+void \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$\+::print\+Matrix\+Couch (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{std\+::size\+\_\+t}]{i }\end{DoxyParamCaption})}
+
+
+
+Ecrit la matrice des poids d\textquotesingle{}une couche, une ligne correspond a un neurone, les poids sont dans l\textquotesingle{}odre des entrees provenant de la couche precedente et les agregations et activations de cette couche (methode principalement utile au debugage) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & reference sur le flux de sortie ou l\textquotesingle{}on veut afficher les informations \\
+\hline
+{\em i} & La couche en question \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rien 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classneuralnetwork_1_1_perceptron_a6930cbdbb12382ffe13a5201d8ef47a8}\label{classneuralnetwork_1_1_perceptron_a6930cbdbb12382ffe13a5201d8ef47a8}} 
+\index{neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}!weight@{weight}}
+\index{weight@{weight}!neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}}
+\subsubsection{\texorpdfstring{weight()}{weight()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+double \& \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$\+::weight (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{couch,  }\item[{std\+::size\+\_\+t}]{neuron,  }\item[{std\+::size\+\_\+t}]{previous }\end{DoxyParamCaption})}
+
+
+
+Accesseur des poids du reseau. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em couch} & La couche a laquelle appartient le neurone qui a le poids sur une de ses entrees \\
+\hline
+{\em neuron} & Le neurone de la couche \\
+\hline
+{\em previous} & Le neurone de la couche precedente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Accesseur sur le poids 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classneuralnetwork_1_1_perceptron_a9e4e8b2536a300feb5050478bd54e0ab}\label{classneuralnetwork_1_1_perceptron_a9e4e8b2536a300feb5050478bd54e0ab}} 
+\index{neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}!weights\+\_\+count@{weights\+\_\+count}}
+\index{weights\+\_\+count@{weights\+\_\+count}!neuralnetwork\+::\+Perceptron@{neuralnetwork\+::\+Perceptron}}
+\subsubsection{\texorpdfstring{weights\+\_\+count()}{weights\_count()}}
+{\footnotesize\ttfamily template$<$std\+::size\+\_\+t D\+E\+P\+TH$>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{classneuralnetwork_1_1_perceptron}{neuralnetwork\+::\+Perceptron}}$<$ D\+E\+P\+TH $>$\+::weights\+\_\+count (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{couch }\end{DoxyParamCaption})}
+
+
+
+Nombre de poids de chaque neurone d\textquotesingle{}une couche. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em couch} & La couche en question \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+le nombre de poids pour un neurone de la couche en question 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_perceptron_8hpp}{Perceptron.\+hpp}}\end{DoxyCompactItemize}

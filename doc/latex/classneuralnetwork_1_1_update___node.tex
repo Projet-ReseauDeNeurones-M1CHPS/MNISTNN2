@@ -1,0 +1,61 @@
+\hypertarget{classneuralnetwork_1_1_update___node}{}\section{neuralnetwork\+:\+:Update\+\_\+\+Node Class Reference}
+\label{classneuralnetwork_1_1_update___node}\index{neuralnetwork\+::\+Update\+\_\+\+Node@{neuralnetwork\+::\+Update\+\_\+\+Node}}
+
+
+Classe de noeud de mise a jour (calculs) du graphe de retropropagation.  
+
+
+
+
+{\ttfamily \#include $<$Perceptron.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classneuralnetwork_1_1_update___node_a047bb8357817785edafa3df3093aaa7d}{Update\+\_\+\+Node}} (Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic, Eigen\+::\+Row\+Major $>$ $\ast$w, double s, Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, 1 $>$ $\ast$e, Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, 1 $>$ $\ast$a, int f\+\_\+row, int f\+\_\+col, int n\+\_\+rows, int n\+\_\+cols)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classneuralnetwork_1_1_update___node_acb4569d976e35d17308d1faf8de84439}\label{classneuralnetwork_1_1_update___node_acb4569d976e35d17308d1faf8de84439}} 
+void {\bfseries operator()} (tbb\+::flow\+::continue\+\_\+msg m)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe de noeud de mise a jour (calculs) du graphe de retropropagation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classneuralnetwork_1_1_update___node_a047bb8357817785edafa3df3093aaa7d}\label{classneuralnetwork_1_1_update___node_a047bb8357817785edafa3df3093aaa7d}} 
+\index{neuralnetwork\+::\+Update\+\_\+\+Node@{neuralnetwork\+::\+Update\+\_\+\+Node}!Update\+\_\+\+Node@{Update\+\_\+\+Node}}
+\index{Update\+\_\+\+Node@{Update\+\_\+\+Node}!neuralnetwork\+::\+Update\+\_\+\+Node@{neuralnetwork\+::\+Update\+\_\+\+Node}}
+\subsubsection{\texorpdfstring{Update\+\_\+\+Node()}{Update\_Node()}}
+{\footnotesize\ttfamily neuralnetwork\+::\+Update\+\_\+\+Node\+::\+Update\+\_\+\+Node (\begin{DoxyParamCaption}\item[{Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic, Eigen\+::\+Row\+Major $>$ $\ast$}]{w,  }\item[{double}]{s,  }\item[{Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, 1 $>$ $\ast$}]{e,  }\item[{Eigen\+::\+Matrix$<$ double, Eigen\+::\+Dynamic, 1 $>$ $\ast$}]{a,  }\item[{int}]{f\+\_\+row,  }\item[{int}]{f\+\_\+col,  }\item[{int}]{n\+\_\+rows,  }\item[{int}]{n\+\_\+cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Matrice a laquelle est affecte le noeud du graphe \\
+\hline
+{\em s} & Pas d\textquotesingle{}apprentissage \\
+\hline
+{\em e} & Erreur en entree \\
+\hline
+{\em a} & Activation en sortie \\
+\hline
+{\em f\+\_\+act} & Fonction d\textquotesingle{}activation \\
+\hline
+{\em f\+\_\+row} & Premiere ligne de la matrice dont s\textquotesingle{}occupe le noeud \\
+\hline
+{\em f\+\_\+col} & Premiere colonne de la matrice dont s\textquotesingle{}occupe le noeud (a priori 0) \\
+\hline
+{\em n\+\_\+rows} & Nombre de lignes dont s\textquotesingle{}occupe le noeud \\
+\hline
+{\em n\+\_\+cols} & Nombre de colonnes dont s\textquotesingle{}occupe le noeud (a priori la largeur de la matrice) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_perceptron_8hpp}{Perceptron.\+hpp}}\end{DoxyCompactItemize}
